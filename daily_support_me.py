@@ -23,7 +23,7 @@ def tg_msg(msg):
 
 ## Question to ChatGPT
 system_question = "AI  내 개인 비서처럼 작성해줘."
-user_question = '''인생에 힘이 되는 따뜻하고 철학적이며 투자에 도움이 되는 명언 한마디 알려줘!'''
+user_question = '''인생에 힘이 되는 따뜻하고 철학적이며 투자에 도움이 되는 명언 한마디 알려줘! 말한 사람과 함께'''
 
 response = client.chat.completions.create(
     model="gpt-4o",
