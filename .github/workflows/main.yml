@@ -10,7 +10,7 @@ on:
 
 jobs:
   run-daily-gpt:
-    if: github.event.schedule == '0 15 * * *'
+    if: github.event.schedule == '0 15 * * *' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
   run-weekly-gpt:
-    if: github.event.schedule == '0 9 * * 6'
+    if: github.event.schedule == '0 9 * * 6'  || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
 
     steps:
