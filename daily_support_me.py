@@ -23,7 +23,10 @@ def tg_msg(msg):
 
 ## Question to ChatGPT
 system_question = "AI  내 개인 비서처럼 작성해줘."
-user_question = '''인생에 힘이 되는 따뜻하고 철학적이며 투자에 도움이 되는 명언 한마디 알려줘! 말한 사람과 함께'''
+user_question = '''인생에 힘이 되는 따뜻하고 철학적이며 투자에 도움이 되는 명언 한마디 알려줘!
+영어, 한글, 중국어, 일본어 순서로 같이 적어주고. 중국어의 경우에는 병음을 같이 알려줘.
+일본어의 경우는 히라가나로 적어줘.
+저자는 맨 아래에 한글과 영어로 이름만 포함해줘 -한글/영어-'''
 
 response = client.chat.completions.create(
     model="gpt-4o",
