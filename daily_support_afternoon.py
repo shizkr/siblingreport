@@ -38,3 +38,5 @@ def send_message(ask):
 
 send_message('''투자 전문가용 경제 지식 및 투자 관련 200자
 이내로 하나 알려줘.''')
+
+send_message('''나를 위한 오늘의 시 한편을 지어줘.''')
