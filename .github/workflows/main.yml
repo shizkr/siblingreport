@@ -24,11 +24,12 @@ jobs:
 
       - name: 📦 의존성 설치
         run: |
-          pip install openai fpdf2 yagmail python-dotenv yfinance deep_translator matplotlib PyPDF2 pandas_datareader pd bs4 seaborn
+          pip install openai fpdf2 yagmail time python-dotenv yfinance deep_translator matplotlib PyPDF2 pandas_datareader pd bs4 seaborn
 
       - name: 📤 GPT → Message
         run: |
           python daily_support_me.py
+          python daily_support_afternoon.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
@@ -51,7 +52,7 @@ jobs:
 
       - name: 📦 의존성 설치
         run: |
-          pip install openai fpdf2 yagmail python-dotenv yfinance deep_translator matplotlib PyPDF2 pandas_datareader pd bs4 seaborn
+          pip install openai fpdf2 yagmail python-dotenv time yfinance deep_translator matplotlib PyPDF2 pandas_datareader pd bs4 seaborn
 
       - name: 📤 GPT → Message
         run: |
