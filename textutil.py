@@ -2,7 +2,9 @@ from google.cloud import texttospeech
 
 # Load your service account key
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "security/advance-symbol-407401-6cda3249d713.json"  # Change this
+
+if os.getenv("GITHUB_ACTIONS") != "true":
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "security/advance-symbol-407401-6cda3249d713.json"  # Change this
 
 def text_to_mp3(message, output):
 
